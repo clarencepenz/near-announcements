@@ -1,0 +1,1 @@
+near call $CONTRACT like --account_id $OWNER '{"uid": "ANC-1648304181597342330"}'
