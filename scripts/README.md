@@ -33,14 +33,14 @@ It uses the following setup:
   export OWNER=           # any account you control
 
   # for example
-  # export CONTRACT=dev-1615190770786-2702449
-  # export OWNER=ikeh_akinyemi.testnet
+  # export CONTRACT=dev-1648303999383-74321525399576
+  # export OWNER=ogenieni.testnet
   ```
 
 - Commands
   ```sh
   1.deploy.sh               # cleanup, compile and deploy contract
-  2likeAnnouncementdate_candy_shop.sh                # call methods on the deployed contract
+  2.createAnnouncement.sh                # call methods on the deployed contract
   ```
 
 ### Terminal **B**
@@ -51,7 +51,7 @@ It uses the following setup:
   export CONTRACT=        # depends on deployment
 
   # for example
-  # export CONTRACT=dev-1615190770786-2702449
+  # export CONTRACT=dev-1648303999383-74321525399576
   ```
 
 - Commands
