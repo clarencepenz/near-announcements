@@ -60,28 +60,28 @@ describe("View a single Announcement", () => {
 })
 
 
-describe("Delete a single Announcement", () => {
-  beforeEach(() => {
-    VMContext.setAttached_deposit(TxFee);
-    VMContext.setSigner_account_id(announcer);
+// describe("Delete a single Announcement", () => {
+//   beforeEach(() => {
+//     VMContext.setAttached_deposit(TxFee);
+//     VMContext.setSigner_account_id(announcer);
 
-    const text = "MilkyWay Galaxy arrives today";
-    createAnnouncement(text);
-  });
+//     const text = "MilkyWay Galaxy arrives today";
+//     createAnnouncement(text);
+//   });
 
-  it("Deletes a single announcement and returns a response", () => {
-    const response = deleteAnnouncement(announcementIds[0]);
-    expect(response).toBe('⚠️ ' + announcementIds[0] +  " Announcement Deleted");
-  });
+//   it("Deletes a single announcement and returns a response", () => {
+//     const response = deleteAnnouncement(announcementIds[0]);
+//     expect(response).toBe('⚠️ ' + announcementIds[0] +  " Announcement Deleted");
+//   });
 
-  it("Smart contract panics when there's no Announcement with such ID", () => {
-    function deleteUnknownItem(): void {
-      deleteAnnouncement("ANC-0000001");
-    }
-    expect(deleteUnknownItem).toThrow("This Announcement doesn't exist")
-  })
+//   it("Smart contract panics when there's no Announcement with such ID", () => {
+//     function deleteUnknownItem(): void {
+//       deleteAnnouncement("ANC-0000001");
+//     }
+//     expect(deleteUnknownItem).toThrow("This Announcement doesn't exist")
+//   })
 
-})
+// })
 
 
 describe("To like on a single Announcement", () => {

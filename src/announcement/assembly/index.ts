@@ -38,7 +38,13 @@ export function getAnnouncements(): Announcement[] {
 export function deleteAnnouncement(uid: announcementID): string {
   assert(announcement.contains(uid), "This Announcement doesn't currently exist");
   announcement.delete(uid);
-  
+
+  for(let x = 0; x < announcementIds.length; x++){
+    if(announcementIds[x] == uid){
+      announcementIds.swap_remove(x)
+    }
+ }
+ 
   return '⚠️ ' + uid +  " Announcement Deleted"
 }
 
